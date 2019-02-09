@@ -1,0 +1,118 @@
+import java.util.Scanner;
+public class Main {
+
+public static void main(String[] args) {
+    // TODO Auto-generated method stub
+
+    Scanner input = new Scanner(System.in);
+    Scanner food_choice = new Scanner(System.in);
+    Scanner drinks_choice = new Scanner(System.in);
+    Scanner payments = new Scanner(System.in);
+    boolean mainLoop = true;
+
+    int choice;
+        while(true){
+            System.out.println("=====================================");
+            System.out.println("Main Menu\n");
+            System.out.println("=====================================");
+            System.out.print("1.) Foods\n");
+            System.out.print("2.) Drinks \n");
+            System.out.print("3.) Payment \n");
+            System.out.print("4.) Exit\n");
+            System.out.print("\n Enter Your Menu Choice: ");
+
+            choice = input.nextInt();
+
+
+
+
+        switch(choice){
+
+        case 1:
+            //Definitions
+            
+            int men_choice;
+            String answer;
+            boolean yn;
+            System.out.println("=====================================");
+            System.out.println("Foods Menu");
+            System.out.println("=====================================");
+            System.out.println("\n [1]. adobo 30 pesos");
+            System.out.println("\n [2]. beef 40 pesos");
+            System.out.println("\n [3]. menudo 60 pesos");
+            System.out.print("\n Enter Your Food Choice: ");
+            
+            men_choice = food_choice.nextInt();
+            
+            System.out.println("You order Food " + men_choice);
+            System.out.println("\n Dou you want add Softdrinks? ");
+                while (true) {
+                answer = food_choice.nextLine().trim().toLowerCase();
+                    if (answer.equals("y")) {
+                      yn = true;
+                      break;
+                    } else if (answer.equals("n")) {
+                      yn = false;
+                      break;
+                    }
+              }
+            break;
+
+        case 2: 
+            
+            int drinks;
+            String d;
+            System.out.println("=====================================");
+            System.out.println("Drinks Menu");
+            System.out.println("=====================================");
+            System.out.println("\n [1]. coke 30 pesos");
+            System.out.println("\n [2]. sprite 40 pesos");
+            System.out.println("\n [3]. orange 60 pesos");
+            System.out.print("\n Enter Your Drinks Choice: ");
+            
+            
+            drinks = drinks_choice.nextInt();
+            System.out.println("You order Food " + drinks);
+            System.out.println("\n Dou you want add Foods? ");
+            while (true) {
+                d = drinks_choice.nextLine().trim().toLowerCase();
+                    if (d.equals("y")) {
+                      yn = true;
+                      break;
+                    } else if (d.equals("n")) {
+                      yn = false;
+                      break;
+                    }
+              }
+
+            break;
+        
+        case 3:
+            
+            int pay1,pay2,sum;
+            System.out.println("=====================================");
+            System.out.print("\n Enter Payment: ");
+            System.out.println("=====================================");
+            pay1 = payments.nextInt();
+            break;            
+            
+
+        case 4: 
+            System.out.println("Exiting Program...");
+            System.exit(0);
+             break;
+        default :
+                 System.out.println("This is not a valid Menu Option! Please Select Another");
+                 break;
+
+        }
+
+
+        }
+
+
+
+
+    }
+
+   }
